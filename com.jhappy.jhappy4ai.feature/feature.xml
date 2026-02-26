@@ -5,8 +5,8 @@
       version="1.0.0.qualifier"
       provider-name="JHAPPY">
 
-   <description url="http://www.example.com/description">
-      [ここにフィーチャーの説明を入力してください。]
+   <description>
+      Combines all source files within a specified folder into a single file for export. This is designed to make it easy to send your entire codebase to an AI in one go.
    </description>
 
    <copyright url="http://www.example.com/copyright">
