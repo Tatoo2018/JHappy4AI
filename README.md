@@ -7,7 +7,9 @@
 
 **JHappy AI Exporter** is an Eclipse plugin designed to bridge the gap between your development workspace and AI tools like ChatGPT, Gemini, and Claude. It seamlessly aggregates your selected source code into a single, LLM-optimized text file.
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image1.jpg)
+<p align="center">
+  <img src="JHappy4AI_eclipsePDEproject/images/image1.jpg" width="600">
+</p>
 
 ## ✨ Key Features
 * **Smart Aggregation:** Merges multiple files and folders into a single Markdown-formatted text file (`.txt`).
