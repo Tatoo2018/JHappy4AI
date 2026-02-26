@@ -14,7 +14,7 @@
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image3.jpg)
+![Context Menu1](JHappy4AI_eclipsePDEproject/images/image5.jpg)
 
 ## Installation
 
