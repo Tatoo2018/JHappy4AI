@@ -14,6 +14,20 @@
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
 
+## Installation
+
+To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
+
+1. Copy the following Update Site URL:
+   `https://tatoo2018.github.io/JHappy4AI/`
+2. In Eclipse, go to **Help** > **Install New Software...**.
+3. Click the **Add...** button.
+4. Enter `JHappy4AI` in the Name field and paste the URL above into the Location field.
+5. Click **Add**, then select **JHappy AI Exporter** from the list.
+6. Follow the prompts to complete the installation and restart Eclipse.
+
+> **Note:** Since this is a self-signed plugin, you may see a "Security Warning" during installation. Please click "Install anyway" to proceed.
+
 ## 🚀 How to Use
 1. Select projects, folders, or files in the **Package Explorer**.
 2. Right-click and choose **🤖 Copy Source for AI**.
@@ -40,6 +54,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 * **コンテキスト長保護（MB制限）:** AIの入力制限に合わせて、出力ファイルの最大サイズ（MB単位）を指定可能。制限到達時は安全に書き込みを中断し、警告を挿入します。
 * **文字コード自動統一:** 各ソースファイルの元の文字コード（Shift-JISなど）に関わらず、すべて **UTF-8** に変換して出力し、AI側での文字化けを防ぎます。
 * **完全日本語対応:** メニュー、ダイアログ、および内蔵のヘルプシステムはすべて日本語環境に対応しています。
+
+## インストール方法 (Japanese)
+
+Eclipse IDE に **JHappy4AI** をインストールするには、以下の手順に従ってください。
+
+1. 次のアップデートサイトの URL をコピーします：
+   `https://[あなたのユーザー名].github.io/JHappy4AI/`
+2. Eclipse を起動し、メニューの **[ヘルプ] (Help)** > **[新規ソフトウェアのインストール...] (Install New Software...)** を選択します。
+3. **[追加...] (Add...)** ボタンをクリックします。
+4. 「名前」欄に `JHappy4AI`、「ロケーション」欄に先ほどコピーした URL を入力し、**[追加]** を押します。
+5. リストに表示された **JHappy AI Exporter** にチェックを入れます。
+6. ウィザードの指示に従い、インストールを完了させて Eclipse を再起動してください。
+
+> **注意:** 本プラグインは署名されていないため、インストール中に「セキュリティ警告」が表示されます。そのまま **[インストールを続行] (Install anyway)** を選択して進めてください。
 
 ## 🚀 使い方
 1. **パッケージ・エクスプローラー**で、対象のプロジェクトやファイルを選択します。
