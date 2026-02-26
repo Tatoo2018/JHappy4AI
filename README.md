@@ -66,7 +66,7 @@ This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_ecl
 Eclipse IDE に **JHappy4AI** をインストールするには、以下の手順に従ってください。
 
 1. 次のアップデートサイトの URL をコピーします：
-   `https://[あなたのユーザー名].github.io/JHappy4AI/`
+   `https://tatoo2018.github.io/JHappy4AI/`
 2. Eclipse を起動し、メニューの **[ヘルプ] (Help)** > **[新規ソフトウェアのインストール...] (Install New Software...)** を選択します。
 3. **[追加...] (Add...)** ボタンをクリックします。
 4. 「名前」欄に `JHappy4AI`、「ロケーション」欄に先ほどコピーした URL を入力し、**[追加]** を押します。
