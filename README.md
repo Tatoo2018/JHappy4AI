@@ -46,7 +46,7 @@ You can change the default extensions and size limits by navigating to:
 `Window` > `Preferences` > `JHappy AI Exporter Settings`
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) file for details.
 
 ---
 
