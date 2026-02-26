@@ -14,6 +14,8 @@
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
 
+![Context Menu1](JHappy4AI_eclipsePDEproject/images/image3.jpg)
+
 ## Installation
 
 To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
