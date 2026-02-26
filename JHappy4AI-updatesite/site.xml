@@ -3,8 +3,12 @@
    <description name="JHappy update site">
       This is Happy update site
    </description>
-   <feature url="features/com.jhappy.jhappy4ai.feature_1.0.0.202602270725.jar" id="com.jhappy.jhappy4ai.feature" version="1.0.0.202602270725">
+   <feature url="features/com.jhappy.jhappy4ai.feature_1.0.0.202602270813.jar" id="com.jhappy.jhappy4ai.feature" version="1.0.0.202602270813">
       <category name="tool"/>
    </feature>
-   <category-def name="tool" label="TOOL"/>
+   <category-def name="tool" label="TOOL">
+      <description>
+         Source Code Exporter for AI Prompts
+      </description>
+   </category-def>
 </site>
