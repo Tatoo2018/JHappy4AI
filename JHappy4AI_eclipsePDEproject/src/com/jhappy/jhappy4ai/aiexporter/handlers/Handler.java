@@ -36,7 +36,10 @@ public class Handler extends AbstractHandler {
     public static final String PREF_IGNORED_FOLDERS = "AI_EXPORTER_IGNORED_FOLDERS";
     public static final String PREF_MAX_CHARS = "AI_EXPORTER_MAX_CHARS";
     
-
+ // ★追加: UIテスト用のフラグと変数
+    public static boolean isTestMode = false;
+    public static String testSavePath = null;
+    
     @Override
     public Object execute(ExecutionEvent event) throws ExecutionException {
         ISelection selection = HandlerUtil.getCurrentSelection(event);
@@ -44,35 +47,51 @@ public class Handler extends AbstractHandler {
 
         Shell activeShell = HandlerUtil.getActiveShell(event);
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-
+        
         // 1. デフォルト設定の読み込み
         String defAllowed = store.getString(PREF_ALLOWED_EXTENSIONS);
         String defExcluded = store.getString(PREF_EXCLUDED_EXTENSIONS);
         String defFolders = store.getString(PREF_IGNORED_FOLDERS);
         String defMaxMB = store.getString(PREF_MAX_CHARS);
 
-        // 2. ダイアログ表示（今回用の設定）
-        ExportConfigDialog configDialog = new ExportConfigDialog(activeShell, defAllowed, defExcluded, defFolders, defMaxMB);
-        if (configDialog.open() != Window.OK) return null;
-
-        // 3. 設定値の確定
-        String[] allowedExtensions = parseCsv(configDialog.getAllowed());
-        String[] excludedExts = parseCsv(configDialog.getExcluded());
-        String[] ignoredFolders = parseCsv(configDialog.getFolders());
-
+        // --- 変数の準備 ---
+        String[] allowedExtensions, excludedExts, ignoredFolders;
         long maxSizeBytes;
-        try {
-            long maxMB = Long.parseLong(configDialog.getMaxChars());
-            maxSizeBytes = maxMB * 1024L * 1024L;
-        } catch (NumberFormatException e) {
-            maxSizeBytes = 2L * 1024L * 1024L;
+        String savePath;
+
+        // ★ テストモードの分岐
+        if (isTestMode) {
+            // テスト時はダイアログを出さず、デフォルト値とテスト用パスを強制適用する
+            allowedExtensions = parseCsv(defAllowed);
+            excludedExts = parseCsv(defExcluded);
+            ignoredFolders = parseCsv(defFolders);
+            maxSizeBytes = 10L * 1024L * 1024L; // テスト用は適当に10MB
+            savePath = testSavePath; // HandlerUITestから渡されたパス
+            
+        } else {
+            // ========== 通常のフロー（ダイアログを表示） ==========
+            // 2. ダイアログ表示
+            ExportConfigDialog configDialog = new ExportConfigDialog(activeShell, defAllowed, defExcluded, defFolders, defMaxMB);
+            if (configDialog.open() != Window.OK) return null;
+
+            // 3. 設定値の確定
+            allowedExtensions = parseCsv(configDialog.getAllowed());
+            excludedExts = parseCsv(configDialog.getExcluded());
+            ignoredFolders = parseCsv(configDialog.getFolders());
+
+            try {
+                long maxMB = Long.parseLong(configDialog.getMaxChars());
+                maxSizeBytes = maxMB * 1024L * 1024L;
+            } catch (NumberFormatException e) {
+                maxSizeBytes = 2L * 1024L * 1024L;
+            }
+
+            // 4. 保存先ダイアログ
+            savePath = askSavePath(activeShell);
+            if (savePath == null) return null;
         }
 
-        // 4. 保存先
-        String savePath = askSavePath(activeShell);
-        if (savePath == null) return null;
-
-        // 5. 実行
+        // 5. 実行ロジックはそのまま
         List<IFile> targetFiles = new ArrayList<>();
         try {
             IStructuredSelection ss = (IStructuredSelection) selection;
@@ -87,24 +106,25 @@ public class Handler extends AbstractHandler {
             try (BufferedWriter writer = new BufferedWriter(
                     new OutputStreamWriter(new FileOutputStream(savePath), StandardCharsets.UTF_8))) {
                 
-                // 結果を受け取る
                 ExportService.ExportResult result = service.performExport(targetFiles, writer, maxSizeBytes);
                 
-                activeShell.getDisplay().asyncExec(() -> {
-                    String pattern = result.limitReached ? Messages.Handler_SuccessMsgLimit : Messages.Handler_SuccessMsg;
-                    
-                    double sizeInMB = (double) result.totalBytes / (1024 * 1024);
-                    String formattedSize = String.format("%.2f MB", sizeInMB);
-                    
-                    // {0}にファイル数、{1}にフォーマット済みのMBサイズを埋め込む
-                    String finalMsg = java.text.MessageFormat.format(pattern, result.fileCount, formattedSize);
-
-                    
-                    MessageDialog.openInformation(activeShell, Messages.Handler_SuccessTitle, finalMsg);
-                });
+                // ★ 完了ダイアログもテスト時はスキップする
+                if (!isTestMode) {
+                    activeShell.getDisplay().asyncExec(() -> {
+                        String pattern = result.limitReached ? Messages.Handler_SuccessMsgLimit : Messages.Handler_SuccessMsg;
+                        double sizeInMB = (double) result.totalBytes / (1024 * 1024);
+                        String formattedSize = String.format("%.2f MB", sizeInMB);
+                        String finalMsg = java.text.MessageFormat.format(pattern, result.fileCount, formattedSize);
+                        MessageDialog.openInformation(activeShell, Messages.Handler_SuccessTitle, finalMsg);
+                    });
+                }
             }
         } catch (Exception e) {
-            showError(activeShell, Messages.Handler_ErrorSaveTitle, e);
+            if (!isTestMode) { // エラーダイアログもスキップ
+                showError(activeShell, Messages.Handler_ErrorSaveTitle, e);
+            } else {
+                e.printStackTrace(); // テスト時はコンソールに出すだけ
+            }
         }
 
         return null;
