@@ -87,7 +87,7 @@ Eclipse IDE に **JHappy4AI** をインストールするには、以下の手�
 `ウィンドウ` ＞ `設定` ＞ `JHappy AI エクスポート設定`
 
 ## 📄 ライセンス
-本プロジェクトは MIT License の下で公開されています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
+本プロジェクトは MIT License の下で公開されています。詳細は [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) ファイルをご覧ください。
 
 ---
 
@@ -128,4 +128,4 @@ Eclipse IDE に **JHappy4AI** をインストールするには、以下の手�
 `Window (窗口)` > `Preferences (首选项)` > `JHappy AI Exporter Settings`
 
 ## 📄 开源协议
-本项目基于 MIT 协议开源 - 详情请参阅 [LICENSE](LICENSE) 文件。
+本项目基于 MIT 协议开源 - 详情请参阅 [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) 文件。
