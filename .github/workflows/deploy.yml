@@ -34,6 +34,48 @@ jobs:
             -Djdk.xml.maxGeneralEntitySizeLimit=0
             -Djdk.xml.totalEntitySizeLimit=0
             -Djdk.xml.entityExpansionLimit=0
+            
+      - name: 📄 Create Info HTML for Browser Access
+        run: |
+          cat << 'EOF' > JHappy4AI-updatesite/target/repository/index.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Eclipse Update Site - JHappy4AI</title>
+              <style>
+                  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #2c3e50; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+                  .card { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; width: 100%; text-align: center; border-top: 5px solid #3498db; }
+                  h1 { font-size: 1.5rem; margin-top: 0; color: #2c3e50; }
+                  .lang-section { text-align: left; background: #f8f9fa; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem; border-left: 4px solid #bdc3c7; }
+                  .lang-section p { margin: 0 0 0.8rem 0; font-size: 0.95rem; line-height: 1.5; }
+                  .lang-section strong { color: #e74c3c; }
+                  .home-btn { display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.2s; }
+                  .home-btn:hover { background-color: #2980b9; }
+              </style>
+          </head>
+          <body>
+              <div class="card">
+                  <h1>🔌 Eclipse Update Site</h1>
+                  
+                  <div class="lang-section">
+                      <p><strong>🇺🇸 English:</strong><br>This URL is an <strong>Eclipse Update Site</strong>. It is not meant to be viewed in a web browser.<br>Please copy this URL and paste it into Eclipse's <em>"Install New Software..."</em> dialog to install the plugin.</p>
+                  </div>
+
+                  <div class="lang-section">
+                      <p><strong>🇯🇵 日本語:</strong><br>ここは <strong>Eclipseの更新サイト（Update Site）</strong> です。ブラウザで閲覧するためのページではありません。<br>このURLをコピーして、Eclipseの <em>「新規ソフトウェアのインストール...」</em> メニューに貼り付けてプラグインをインストールしてください。</p>
+                  </div>
+
+                  <div class="lang-section">
+                      <p><strong>🇨🇳 简体中文:</strong><br>这是一个 <strong>Eclipse 更新站点 (Update Site)</strong>。它不适合在浏览器中查看。<br>请复制此 URL 并将其粘贴到 Eclipse 的 <em>“安装新软件...”</em> 对话框中以安装插件。</p>
+                  </div>
+
+                  <a href="https://tatoo2018.github.io/JHappy4AI/" class="home-btn">🏠 Go to JHappy4AI Homepage</a>
+              </div>
+          </body>
+          </html>
+          EOF
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
