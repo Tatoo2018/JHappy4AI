@@ -37,3 +37,9 @@ jobs:
           folder: JHappy4AI-updatesite/target/repository
           # 公開専用の別ブランチ（勝手に作られます）
           branch: gh-pages
+          # ブランチによって保存先を自動変更する
+          target-folder: ${{ github.ref == 'refs/heads/main' && 'updatesite/main' || 'updatesite/develop' }}
+          # 他のフォルダ（index.htmlなど）を消さないように設定
+          clean: true
+          # 
+          single-commit: false
