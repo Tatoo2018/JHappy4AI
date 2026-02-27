@@ -34,6 +34,8 @@ To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
 
 > **Note:** Since this is a self-signed plugin, you may see a "Security Warning" during installation. Please click "Install anyway" to proceed.
 
+![Context Menu1](JHappy4AI_eclipsePDEproject/images/image6.jpg)
+
 ## 🚀 How to Use
 1. Select projects, folders, or files in the **Package Explorer**.
 2. Right-click and choose **🤖 Copy Source for AI**.
