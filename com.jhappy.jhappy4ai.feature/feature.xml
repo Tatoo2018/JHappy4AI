@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="com.jhappy.jhappy4ai.feature"
-      label="Feature"
-      version="1.0.0.qualifier"
+      label="JHappyFeature"
+      version="1.0.1.qualifier"
       provider-name="JHAPPY">
 
    <description url="https://github.com/Tatoo2018/JHappy4AI">
