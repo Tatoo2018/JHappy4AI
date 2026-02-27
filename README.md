@@ -18,18 +18,17 @@
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
 
-
-
-## Installation
+## 📥 Installation
 
 To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
 
-1. Copy the following Update Site URL:
-   `https://tatoo2018.github.io/JHappy4AI/`
+1. Choose and copy one of the following Update Site URLs depending on your needs:
+   * **Stable Version (Recommended):** `https://tatoo2018.github.io/JHappy4AI/updatesite/main/`
+   * **Development Version (Latest features):** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
 2. In Eclipse, go to **Help** > **Install New Software...**.
 3. Click the **Add...** button.
-4. Enter `JHappy4AI` in the Name field and paste the URL above into the Location field.
-5. Click **Add**, then select **JHappy AI Exporter** from the list.
+4. Enter `JHappy4AI` in the Name field and paste your chosen URL into the Location field.
+5. Click **Add**, then select **JHappy AI Exporter** (under the TOOL category) from the list.
 6. Follow the prompts to complete the installation and restart Eclipse.
 
 > **Note:** Since this is a self-signed plugin, you may see a "Security Warning" during installation. Please click "Install anyway" to proceed.
@@ -51,7 +50,7 @@ You can change the default extensions and size limits by navigating to:
 
 ![Context Menu1](JHappy4AI_eclipsePDEproject/images/image2.jpg)
 
-## ⚙️ Help Documentation
+## 📚 Help Documentation
 You can find the user manual within Eclipse:
 `Help` > `Help Contents` > `JHappy AI User Guide`
 
@@ -59,6 +58,7 @@ You can find the user manual within Eclipse:
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) file for details.
+This update site is automatically maintained by GitHub Actions CI/CD.
 
 ---
 
@@ -73,16 +73,17 @@ This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_ecl
 * **文字コード自動統一:** 各ソースファイルの元の文字コード（Shift-JISなど）に関わらず、すべて **UTF-8** に変換して出力し、AI側での文字化けを防ぎます。
 * **完全日本語対応:** メニュー、ダイアログ、および内蔵のヘルプシステムはすべて日本語環境に対応しています。
 
-## インストール方法 (Japanese)
+## 📥 インストール方法
 
 Eclipse IDE に **JHappy4AI** をインストールするには、以下の手順に従ってください。
 
-1. 次のアップデートサイトの URL をコピーします：
-   `https://tatoo2018.github.io/JHappy4AI/`
+1. 用途に合わせて、以下のいずれかのアップデートサイトURLをコピーします：
+   * **安定版 (推奨):** `https://tatoo2018.github.io/JHappy4AI/updatesite/main/`
+   * **開発版 (最新機能):** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
 2. Eclipse を起動し、メニューの **[ヘルプ] (Help)** > **[新規ソフトウェアのインストール...] (Install New Software...)** を選択します。
 3. **[追加...] (Add...)** ボタンをクリックします。
 4. 「名前」欄に `JHappy4AI`、「ロケーション」欄に先ほどコピーした URL を入力し、**[追加]** を押します。
-5. リストに表示された **JHappy AI Exporter** にチェックを入れます。
+5. リストの「TOOL」カテゴリー内に表示された **JHappy AI Exporter** にチェックを入れます。
 6. ウィザードの指示に従い、インストールを完了させて Eclipse を再起動してください。
 
 > **注意:** 本プラグインは署名されていないため、インストール中に「セキュリティ警告」が表示されます。そのまま **[インストールを続行] (Install anyway)** を選択して進めてください。
@@ -98,12 +99,13 @@ Eclipse IDE に **JHappy4AI** をインストールするには、以下の手�
 毎回同じ設定を入力する手間を省くため、以下のメニューからデフォルト値を変更できます：
 `ウィンドウ` ＞ `設定` ＞ `JHappy AI エクスポート設定`
 
-## ⚙️ Help Documentation
+## 📚 ヘルプドキュメント
 Eclipse内の以下のメニューからユーザーガイドを確認できます：
 `ヘルプ (Help)` > `ヘルプ目次 (Help Contents)` > `JHappy AI ユーザーガイド`
 
 ## 📄 ライセンス
 本プロジェクトは MIT License の下で公開されています。詳細は [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) ファイルをご覧ください。
+本更新サイトは GitHub Actions CI/CD によって自動管理されています。
 
 ---
 
@@ -118,16 +120,17 @@ Eclipse内の以下のメニューからユーザーガイドを確認できま�
 * **编码安全:** 自动根据各个 Eclipse 项目的编码读取文件，并统一导出为 **UTF-8** 格式。
 * **多语言支持:** UI 及内置帮助内容完全支持英语、日语和中文。
 
-## 安装方法
+## 📥 安装方法
 
 请按照以下步骤在您的 Eclipse IDE 中安装 **JHappy4AI**:
 
-1. 复制以下更新站点 URL：
-   `https://tatoo2018.github.io/JHappy4AI/`
+1. 根据您的需求，复制以下任一更新站点 URL：
+   * **稳定版 (推荐):** `https://tatoo2018.github.io/JHappy4AI/updatesite/main/`
+   * **开发版 (最新功能):** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
 2. 在 Eclipse 中，前往 **Help (帮助)** > **Install New Software... (安装新软件...)**。
 3. 点击 **Add... (添加...)** 按钮。
-4. 在 Name (名称) 栏输入 `JHappy4AI`，并在 Location (位置) 栏粘贴上述 URL。
-5. 点击 **Add (添加)**，然后从列表中勾选 **JHappy AI Exporter**。
+4. 在 Name (名称) 栏输入 `JHappy4AI`，并在 Location (位置) 栏粘贴您选择的 URL。
+5. 点击 **Add (添加)**，然后从列表的 TOOL 分类中勾选 **JHappy AI Exporter**。
 6. 按照提示完成安装并重启 Eclipse。
 
 > **注意:** 由于这是一个自签名插件，安装过程中可能会出现“安全警告”。请点击“仍然安装 (Install anyway)”以继续。
@@ -143,9 +146,10 @@ Eclipse内の以下のメニューからユーザーガイドを確認できま�
 您可以通过以下路径更改默认扩展名和大小限制：
 `Window (窗口)` > `Preferences (首选项)` > `JHappy AI Exporter Settings`
 
-## ⚙️ 帮助文档
+## 📚 帮助文档
 您可以在 Eclipse 菜单中查看用户指南：
 `帮助 (Help)` > `帮助内容 (Help Contents)` > `JHappy AI 用户指南 (JHappy AI User Guide)`
 
 ## 📄 开源协议
 本项目基于 MIT 协议开源 - 详情请参阅 [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) 文件。
+本更新站点由 GitHub Actions CI/CD 自动维护。
