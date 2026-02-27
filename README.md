@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Eclipse](https://img.shields.io/badge/Eclipse-Plugin-purple.svg)](https://www.eclipse.org/)
+[![Build Status](https://github.com/tatoo2018/JHappy4AI/actions/workflows/run-tests.yml/badge.svg)](https://github.com/tatoo2018/JHappy4AI/actions)
 
 *[Read this in [Japanese (日本語)](#日本語) | [Chinese (简体中文)](#chinese)]*
 
