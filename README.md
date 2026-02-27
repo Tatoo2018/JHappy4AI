@@ -18,7 +18,7 @@
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image5.jpg)
+
 
 ## Installation
 
@@ -42,6 +42,8 @@ To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
 3. Adjust temporary filters and the MB size limit in the popup dialog.
 4. Click **OK** and save the `jhappy_source_context.txt` file.
 5. Drag & drop the generated file into your favorite AI chat!
+
+![Context Menu1](JHappy4AI_eclipsePDEproject/images/image5.jpg)
 
 ## ⚙️ Configuration
 You can change the default extensions and size limits by navigating to:
