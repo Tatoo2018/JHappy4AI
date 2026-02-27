@@ -2,7 +2,7 @@
 <feature
       id="com.jhappy.jhappy4ai.feature"
       label="JHappyFeature"
-      version="1.0.1.qualifier"
+      version="1.0.3.qualifier"
       provider-name="JHAPPY">
 
    <description url="https://github.com/Tatoo2018/JHappy4AI">
