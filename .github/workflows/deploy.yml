@@ -34,6 +34,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 公開する成果物があるフォルダ
-          folder: JHappy-updatesite/target/repository
+          folder: ./JHappy-updatesite/target/repository
           # 公開専用の別ブランチ（勝手に作られます）
           branch: gh-pages
