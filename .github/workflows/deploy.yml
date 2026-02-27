@@ -42,4 +42,4 @@ jobs:
           # 他のフォルダ（index.htmlなど）を消さないように設定
           clean: true
           # 
-          single-commit: false
+          single-commit: true
