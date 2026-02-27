@@ -47,6 +47,8 @@ To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
 You can change the default extensions and size limits by navigating to:
 `Window` > `Preferences` > `JHappy AI Exporter Settings`
 
+![Context Menu1](JHappy4AI_eclipsePDEproject/images/image2.jpg)
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) file for details.
 
