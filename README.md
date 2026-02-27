@@ -51,6 +51,12 @@ You can change the default extensions and size limits by navigating to:
 
 ![Context Menu1](JHappy4AI_eclipsePDEproject/images/image2.jpg)
 
+## ⚙️ Help Documentation
+You can find the user manual within Eclipse:
+`Help` > `Help Contents` > `JHappy AI User Guide`
+
+![Context Menu1](JHappy4AI_eclipsePDEproject/images/image7.jpg)
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) file for details.
 
@@ -92,6 +98,10 @@ Eclipse IDE に **JHappy4AI** をインストールするには、以下の手�
 毎回同じ設定を入力する手間を省くため、以下のメニューからデフォルト値を変更できます：
 `ウィンドウ` ＞ `設定` ＞ `JHappy AI エクスポート設定`
 
+## ⚙️ Help Documentation
+Eclipse内の以下のメニューからユーザーガイドを確認できます：
+`ヘルプ (Help)` > `ヘルプ目次 (Help Contents)` > `JHappy AI ユーザーガイド`
+
 ## 📄 ライセンス
 本プロジェクトは MIT License の下で公開されています。詳細は [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) ファイルをご覧ください。
 
@@ -132,6 +142,10 @@ Eclipse IDE に **JHappy4AI** をインストールするには、以下の手�
 ## ⚙️ 配置
 您可以通过以下路径更改默认扩展名和大小限制：
 `Window (窗口)` > `Preferences (首选项)` > `JHappy AI Exporter Settings`
+
+## ⚙️ 帮助文档
+您可以在 Eclipse 菜单中查看用户指南：
+`帮助 (Help)` > `帮助内容 (Help Contents)` > `JHappy AI 用户指南 (JHappy AI User Guide)`
 
 ## 📄 开源协议
 本项目基于 MIT 协议开源 - 详情请参阅 [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) 文件。
