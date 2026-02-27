@@ -1,0 +1,39 @@
+name: Build and Deploy Update Site
+
+on:
+  push:
+    branches: [ main ] # mainブランチにプッシュされたら自動実行
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn clean verify
+        env:
+          # ローカルで突破したXML制限解除の呪文
+          MAVEN_OPTS: >-
+            -Djdk.xml.maxGeneralEntitySizeLimit=0
+            -Djdk.xml.totalEntitySizeLimit=0
+            -Djdk.xml.entityExpansionLimit=0
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 公開する成果物があるフォルダ
+          folder: JHappy-updatesite/target/repository
+          # 公開専用の別ブランチ（勝手に作られます）
+          branch: gh-pages
