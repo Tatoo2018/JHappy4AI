@@ -2,7 +2,12 @@ name: Build and Deploy Update Site
 
 on:
   push:
-    branches: [ main ] # mainブランチにプッシュされたら自動実行
+    branches:
+      - main
+      - develop
+    paths-ignore:
+      - '**/*.md'
+      - '.gitignore'
 
 permissions:
   contents: write
@@ -38,7 +43,7 @@ jobs:
           # 公開専用の別ブランチ（勝手に作られます）
           branch: gh-pages
           # ブランチによって保存先を自動変更する
-          target-folder: ${{ github.ref == 'refs/heads/main' && 'updatesite/main' || 'updatesite/develop' }}
+          target-folder: updatesite/${{ github.ref_name }}
           # 他のフォルダ（index.htmlなど）を消さないように設定
           clean: true
           
