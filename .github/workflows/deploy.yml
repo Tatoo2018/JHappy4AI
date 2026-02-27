@@ -41,5 +41,6 @@ jobs:
           target-folder: ${{ github.ref == 'refs/heads/main' && 'updatesite/main' || 'updatesite/develop' }}
           # 他のフォルダ（index.htmlなど）を消さないように設定
           clean: true
+          
           # 
           single-commit: true
