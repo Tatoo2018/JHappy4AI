@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 import com.jhappy.jhappy4ai.aiexporter.handlers.Handler;
 
 @DisplayName("UI Test: Command Execution")
-class HandlerUITest extends ExportIntegrationTest { // 前回のJavaプロジェクト作成機能を継承
+public class HandlerUITest extends ExportIntegrationTest { // 前回のJavaプロジェクト作成機能を継承
 //
 //	@Test
 //    void testMenuCommandExecution() throws Exception {
@@ -62,7 +62,7 @@ class HandlerUITest extends ExportIntegrationTest { // 前回のJavaプロジェ
 //    }
 	
 	@Test
-    void testMenuCommandExecution() throws Exception {
+	public void testMenuCommandExecution() throws Exception {
    
         
       
@@ -164,7 +164,7 @@ class HandlerUITest extends ExportIntegrationTest { // 前回のJavaプロジェ
                 System.out.println("エディタを開きました！6秒後にテストを終了して片付けます...");
 
                 //to check by human
-                long endTime = System.currentTimeMillis() + 6000;
+                long endTime = System.currentTimeMillis() + 1000;
                 Display display = Display.getDefault();
                 while (System.currentTimeMillis() < endTime) {
                     if (!display.readAndDispatch()) {
