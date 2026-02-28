@@ -27,6 +27,7 @@
     </profile>
 </profiles>
 
+
 	<artifactId>JHappy4AI_eclipseJUnitproject</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 	<build>
