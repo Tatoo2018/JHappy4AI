@@ -40,7 +40,6 @@
 					<printSummary>true</printSummary>
 					<failIfNoTests>true</failIfNoTests>
 
-
 					<useUIThread>true</useUIThread>
 					<useUIHarness>true</useUIHarness>
 					<providerHint>junit5</providerHint>
