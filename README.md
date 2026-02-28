@@ -12,7 +12,7 @@
 </p>
 
 
-https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
+
 
 
 ## ✨ Key Features
@@ -21,6 +21,7 @@ https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
 * **Context Window Protection:** Set a maximum output size limit (in MB). The export safely truncates with a warning if the limit is reached.
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
+https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
 
 ## 📥 Installation
 
