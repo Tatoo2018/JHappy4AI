@@ -11,6 +11,10 @@
   <img src="JHappy4AI_eclipsePDEproject/images/image1.jpg" width="600">
 </p>
 
+
+https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
+
+
 ## ✨ Key Features
 * **Smart Aggregation:** Merges multiple files and folders into a single Markdown-formatted text file (`.txt`).
 * **Token Saving (Filtering):** Exclude unnecessary binaries or build folders (e.g., `.class`, `target/`, `bin/`) via customizable whitelists and blacklists.
