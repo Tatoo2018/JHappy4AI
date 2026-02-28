@@ -10,7 +10,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>JHappy4AI</artifactId>
+    <artifactId>JHappy4AI_eclipsePDEproject</artifactId>
     <packaging>eclipse-plugin</packaging>
 
     <build>
