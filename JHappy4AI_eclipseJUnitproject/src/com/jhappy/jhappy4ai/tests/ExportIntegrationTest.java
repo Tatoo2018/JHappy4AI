@@ -32,8 +32,10 @@ import org.junit.jupiter.api.Test;
 
 import com.jhappy.jhappy4ai.aiexporter.logic.ExportService;
 
+
+
 @DisplayName("Integration Test: Real Java Project Operations")
-class ExportIntegrationTest {
+public class ExportIntegrationTest {
 
     public IProject project;
     private IJavaProject javaProject;
@@ -43,7 +45,7 @@ class ExportIntegrationTest {
     public IFile file2 =null;
 
     @BeforeEach
-    void setup() throws CoreException {
+    public void setup() throws CoreException {
         service = new ExportService();
         IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
         String projectName = "TestJavaProject_" + System.currentTimeMillis();
@@ -88,13 +90,13 @@ class ExportIntegrationTest {
     }
 
     @AfterEach
-    void tearDown() throws CoreException {
+    public void tearDown() throws CoreException {
         //
         if (project.exists()) { project.delete(true, true, null); } 
     }
 
     @Test
-    void testExportRealJavaFiles() throws Exception {
+    public void testExportRealJavaFiles() throws Exception {
         // 2. srcフォルダの中にJavaファイルを作成
       
         // 3. 結合処理の実行
@@ -136,7 +138,7 @@ class ExportIntegrationTest {
     /**
      * パス文字列（例: "src/main/java/com/test"）から深い階層のフォルダを一気に作成する
      */
-    private IFolder createFolderRecursively(String folderPath) throws CoreException {
+    public IFolder createFolderRecursively(String folderPath) throws CoreException {
         String[] segments = folderPath.split("/");
         IFolder currentFolder = null;
         for (String segment : segments) {
@@ -155,7 +157,7 @@ class ExportIntegrationTest {
     /**
      * パス文字列（例: "src/main/java/com/test"）から深い階層のフォルダを一気に作成する
      */
-    private IFolder createFolderRecursively2(String folderPath) throws CoreException {
+    public IFolder createFolderRecursively2(String folderPath) throws CoreException {
         String[] segments = folderPath.split("/");
         IFolder currentFolder = null;
         for (String segment : segments) {

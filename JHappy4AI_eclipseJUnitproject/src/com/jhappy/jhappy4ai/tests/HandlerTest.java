@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.junit.jupiter.api.Test;
 
-class HandlerTest {
+public class HandlerTest {
 
     @Test
-    void testWorkspaceExists() {
+    public void testWorkspaceExists() {
         // Eclipseのワークスペースが取得できるかテスト
         assertNotNull(ResourcesPlugin.getWorkspace().getRoot());
     }

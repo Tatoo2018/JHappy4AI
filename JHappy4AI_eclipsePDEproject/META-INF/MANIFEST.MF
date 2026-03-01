@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: JHappy4AI
-Bundle-SymbolicName: JHappy4AI;singleton:=true
+Bundle-SymbolicName: JHappy4AI_eclipsePDEproject;singleton:=true
 Bundle-Version: 1.0.3.qualifier
 Bundle-Activator: com.jhappy.jhappy4ai.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.22.200"
 Bundle-RequiredExecutionEnvironment: JavaSE-21
-Automatic-Module-Name: JHappy4AI
+Automatic-Module-Name: JHappy4AI_eclipsePDEproject
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
+Bundle-Name: JHappy4AI_eclipsePDEproject
