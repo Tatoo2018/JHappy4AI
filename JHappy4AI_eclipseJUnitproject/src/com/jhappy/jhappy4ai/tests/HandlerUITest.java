@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 import com.jhappy.jhappy4ai.aiexporter.handlers.Handler;
 
 @DisplayName("UI Test: Command Execution")
-public class HandlerUITest extends ExportIntegrationTest { // 前回のJavaプロジェクト作成機能を継承
+ class HandlerUITest extends ExportIntegrationTest { // 前回のJavaプロジェクト作成機能を継承
 //
 //	@Test
 //    void testMenuCommandExecution() throws Exception {
