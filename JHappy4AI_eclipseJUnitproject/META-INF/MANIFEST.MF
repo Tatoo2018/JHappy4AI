@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: JHappy4AI_eclipseJUnitproject;singleton:=true
-Bundle-Version: 1.0.5.qualifier
+Bundle-Version: 1.0.6.qualifier
 Fragment-Host: JHappy4AI_eclipsePDEproject
 Require-Bundle: org.eclipse.jdt,
  org.eclipse.jdt.core,
