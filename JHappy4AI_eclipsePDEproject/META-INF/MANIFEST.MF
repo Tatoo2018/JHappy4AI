@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: JHappy4AI_eclipsePDEproject;singleton:=true
-Bundle-Version: 1.0.4.qualifier
+Bundle-Version: 1.0.5.qualifier
 Bundle-Activator: com.jhappy.jhappy4ai.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature id="com.jhappy.jhappy4ai.feature" version="1.0.4.qualifier">
+   <feature id="com.jhappy.jhappy4ai.feature" version="1.0.5.qualifier">
       <category name="tool"/>
    </feature>
    <category-def name="tool" label="TOOL">
