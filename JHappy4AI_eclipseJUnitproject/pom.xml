@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>JHappy4AI</groupId>
 		<artifactId>JHappy4AI.parent</artifactId>
-		<version>1.0.3-SNAPSHOT</version>
+		<version>1.0.4-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	
@@ -17,6 +17,11 @@
 
 <profiles>
     <profile>
+    <!--
+			These arguments are necessary to execute JUnit tests on my local Mac, 
+			but they cause errors on GitHub Actions (Linux). 
+			Therefore, the configuration is split to change depending on the environment.
+		-->
         <id>mac-os-config</id>
         <activation>
             <os><family>mac</family></os>
@@ -45,9 +50,7 @@
 					<useUIThread>true</useUIThread>
 					<useUIHarness>true</useUIHarness>
 					<providerHint>junit5</providerHint>
-					<includes>
-						<include>**/*Test.class</include>
-					</includes>
+
 					<argLine>-Xmx1024m --add-modules=ALL-SYSTEM --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED ${mac.specific.args}</argLine>
 				</configuration>
 			</plugin>

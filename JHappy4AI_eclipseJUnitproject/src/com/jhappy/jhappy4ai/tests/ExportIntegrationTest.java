@@ -35,7 +35,7 @@ import com.jhappy.jhappy4ai.aiexporter.logic.ExportService;
 
 
 @DisplayName("Integration Test: Real Java Project Operations")
-public class ExportIntegrationTest {
+ class ExportIntegrationTest {
 
     public IProject project;
     private IJavaProject javaProject;
@@ -45,7 +45,7 @@ public class ExportIntegrationTest {
     public IFile file2 =null;
 
     @BeforeEach
-    public void setup() throws CoreException {
+     void setup() throws CoreException {
         service = new ExportService();
         IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
         String projectName = "TestJavaProject_" + System.currentTimeMillis();
@@ -90,13 +90,13 @@ public class ExportIntegrationTest {
     }
 
     @AfterEach
-    public void tearDown() throws CoreException {
+     void tearDown() throws CoreException {
         //
         if (project.exists()) { project.delete(true, true, null); } 
     }
 
     @Test
-    public void testExportRealJavaFiles() throws Exception {
+     void testExportRealJavaFiles() throws Exception {
         // 2. srcフォルダの中にJavaファイルを作成
       
         // 3. 結合処理の実行
@@ -124,7 +124,7 @@ public class ExportIntegrationTest {
         }
     }
 
-    public IFile createFile(String path, String content) throws CoreException {
+     IFile createFile(String path, String content) throws CoreException {
         IFile file = project.getFile(path);
         InputStream source = new ByteArrayInputStream(content.getBytes(StandardCharsets.UTF_8));
         if (!file.exists()) {
@@ -138,7 +138,7 @@ public class ExportIntegrationTest {
     /**
      * パス文字列（例: "src/main/java/com/test"）から深い階層のフォルダを一気に作成する
      */
-    public IFolder createFolderRecursively(String folderPath) throws CoreException {
+     IFolder createFolderRecursively(String folderPath) throws CoreException {
         String[] segments = folderPath.split("/");
         IFolder currentFolder = null;
         for (String segment : segments) {
@@ -157,7 +157,7 @@ public class ExportIntegrationTest {
     /**
      * パス文字列（例: "src/main/java/com/test"）から深い階層のフォルダを一気に作成する
      */
-    public IFolder createFolderRecursively2(String folderPath) throws CoreException {
+     IFolder createFolderRecursively2(String folderPath) throws CoreException {
         String[] segments = folderPath.split("/");
         IFolder currentFolder = null;
         for (String segment : segments) {
@@ -175,7 +175,7 @@ public class ExportIntegrationTest {
     /**
      * Java、Webリソース、CI/CD設定など、多様なファイルをリアルな内容で自動生成する
      */
-    public void createMassiveDummyFiles(int count) throws CoreException {
+     void createMassiveDummyFiles(int count) throws CoreException {
         System.out.println(count + " 個の多様なファイルを生成中...");
 
         String[] javaPackages = {
