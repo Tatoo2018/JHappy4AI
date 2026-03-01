@@ -6,11 +6,12 @@
     <parent>
         <groupId>JHappy4AI</groupId>
         <artifactId>JHappy4AI.parent</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0.4-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>JHappy-updatesite</artifactId>
+    <!-- This tag may trigger a warning in the Eclipse editor, but it is required for the Maven build (using the Tycho plugin). -->
     <packaging>eclipse-repository</packaging>
 
     <build>
