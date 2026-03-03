@@ -45,19 +45,19 @@ To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
 4. Click **OK** and save the `jhappy_source_context.txt` file.
 5. Drag & drop the generated file into your favorite AI chat!
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image5.jpg)
+![Usage Screenshots](JHappy4AI_eclipsePDEproject/images/image5.jpg)
 
 ## ⚙️ Configuration
 You can change the default extensions and size limits by navigating to:
 `Window` > `Preferences` > `JHappy AI Exporter Settings`
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image2.jpg)
+![Configuration Menu1](JHappy4AI_eclipsePDEproject/images/image2.jpg)
 
 ## 📚 Help Documentation
 You can find the user manual within Eclipse:
 `Help` > `Help Contents` > `JHappy AI User Guide`
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image7.jpg)
+![Help Menu1](JHappy4AI_eclipsePDEproject/images/image7.jpg)
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) file for details.
