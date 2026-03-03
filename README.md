@@ -1,5 +1,6 @@
 # 🤖 JHappy AI Exporter (JHappy4AI)
 
+[![Build and Deploy Update Site](https://github.com/Tatoo2018/JHappy4AI/actions/workflows/deploy.yml/badge.svg?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Eclipse](https://img.shields.io/badge/Eclipse-Plugin-purple.svg)](https://www.eclipse.org/)
 
