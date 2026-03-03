@@ -11,6 +11,9 @@
     <properties>
         <tycho-version>4.0.7</tycho-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+          <maven.compiler.release>9</maven.compiler.release>
+        <maven.compiler.source>9</maven.compiler.source>
+        <maven.compiler.target>9</maven.compiler.target>
     </properties>
 
     <modules>
@@ -32,9 +35,6 @@
   <url>https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/latest</url>
 </repository>
     </repositories>
-    <maven.compiler.release>9</maven.compiler.release>
-        <maven.compiler.source>9</maven.compiler.source>
-        <maven.compiler.target>9</maven.compiler.target>
 
     <build>
         <plugins>
