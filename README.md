@@ -1,8 +1,13 @@
-# 🤖 JHappy AI Exporter (JHappy4AI)
+# 🤖 JHappy AI Exporter (JHappy4AI) - 🚧 Development Branch
 
 [![Build and Deploy Update Site](https://github.com/Tatoo2018/JHappy4AI/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/Tatoo2018/JHappy4AI/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Eclipse](https://img.shields.io/badge/Eclipse-Plugin-purple.svg)](https://www.eclipse.org/)
+[![Branch: develop](https://img.shields.io/badge/branch-develop-orange.svg)]()
+
+> [!WARNING]
+> **You are currently viewing the `develop` branch.**
+> This branch contains the latest experimental features, bug fixes, and active development work. It may not be fully stable. For the stable release, please switch to the [`main` branch](https://github.com/Tatoo2018/JHappy4AI/tree/main).
 
 *[Read this in [Japanese (日本語)](#日本語) | [Chinese (简体中文)](#chinese)]*
 
@@ -12,147 +17,86 @@
   <img src="JHappy4AI_eclipsePDEproject/images/image1.jpg" width="600">
 </p>
 
-## ✨ Key Features
-* **Smart Aggregation:** Merges multiple files and folders into a single Markdown-formatted text file (`.txt`).
-* **Token Saving (Filtering):** Exclude unnecessary binaries or build folders (e.g., `.class`, `target/`, `bin/`) via customizable whitelists and blacklists.
-* **Context Window Protection:** Set a maximum output size limit (in MB). The export safely truncates with a warning if the limit is reached.
-* **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
-* **Multilingual:** UI and internal Help contents fully support both English and Japanese.
+## 🌳 Branching Strategy
+This repository uses a structured branching model to separate active development from stable releases.
 
-https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
+* **`develop` (Current):** The main working branch. All new features and bug fixes are merged here first. Automatically deployed to the `/develop/` Update Site for testing.
+* **`main`:** The stable production branch. Code is merged here only when it is tested and ready for release. Automatically deployed to the `/main/` Update Site.
+* **`gh-pages`:** The artifact hosting branch. Managed entirely by GitHub Actions, it stores the compiled `.jar` files and `site.xml` metadata for the Eclipse Update Sites. Do not commit here manually.
 
-## 📥 Installation
 
-To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
 
-1. Choose and copy one of the following Update Site URLs depending on your needs:
-   * **Stable Version (Recommended):** `https://tatoo2018.github.io/JHappy4AI/updatesite/main/`
-   * **Development Version (Latest features):** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
-2. In Eclipse, go to **Help** > **Install New Software...**.
-3. Click the **Add...** button.
-4. Enter `JHappy4AI` in the Name field and paste your chosen URL into the Location field.
-5. Click **Add**, then select **JHappy AI Exporter** (under the TOOL category) from the list.
-6. Follow the prompts to complete the installation and restart Eclipse.
+## 🛠 CI/CD Build Target
+Commits pushed to this `develop` branch are automatically built by GitHub Actions and deployed to the following Update Site URL for testing:
+* **Development Build URL:** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
 
-> **Note:** Since this is a self-signed plugin, you may see a "Security Warning" during installation. Please click "Install anyway" to proceed.
+## 📥 Testing Installation
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image6.jpg)
+To install the bleeding-edge version from this branch:
+1. In Eclipse, go to **Help** > **Install New Software...**.
+2. Click **Add...** and paste the **Development Build URL** above.
+3. Select **JHappy AI Exporter** (under the TOOL category) from the list.
+4. Follow the prompts and restart Eclipse. *(Note: Accept the "Security Warning" for self-signed plugins).*
 
-## 🚀 How to Use
-1. Select projects, folders, or files in the **Package Explorer**.
-2. Right-click and choose **🤖 Copy Source for AI**.
-3. Adjust temporary filters and the MB size limit in the popup dialog.
-4. Click **OK** and save the `jhappy_source_context.txt` file.
-5. Drag & drop the generated file into your favorite AI chat!
+---
+*(Features, How to Use, and Configuration remain the same. See documentation for details.)*
+---
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image5.jpg)
+<h1 id="日本語">🤖 JHappy AI Exporter - 🚧 開発用ブランチ (develop)</h1>
 
-## ⚙️ Configuration
-You can change the default extensions and size limits by navigating to:
-`Window` > `Preferences` > `JHappy AI Exporter Settings`
+> [!WARNING]
+> **現在表示しているのは `develop` ブランチです。**
+> ここには未リリースの最新機能や現在進行中のコードが含まれており、動作が不安定な場合があります。安定版を利用・確認したい場合は [`main` ブランチ](https://github.com/Tatoo2018/JHappy4AI/tree/main) を参照してください。
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image2.jpg)
+**JHappy AI Exporter** は、Eclipse上のソースコードをChatGPTやGeminiなどのAIツールに渡す作業を劇的に効率化するプラグインです。
 
-## 📚 Help Documentation
-You can find the user manual within Eclipse:
-`Help` > `Help Contents` > `JHappy AI User Guide`
+## 🌳 ブランチ構成について
+本リポジトリでは、開発環境と安定版を明確に分けるためのブランチ戦略を採用しています。
 
-![Context Menu1](JHappy4AI_eclipsePDEproject/images/image7.jpg)
+* **`develop` (現在表示中):** 開発のメインブランチです。新機能や修正はまずここに追加され、テスト用に `/develop/` アップデートサイトへ自動デプロイされます。
+* **`main`:** 安定版ブランチです。リリース準備が整った検証済みのコードのみがマージされ、一般ユーザー向けの `/main/` アップデートサイトへ自動デプロイされます。
+* **`gh-pages`:** 公開用ホスティングブランチです。GitHub Actions によって完全に自動管理されており、ビルドされたプラグイン本体（`.jar`）や更新インデックスが格納されています。手動での編集は行わないでください。
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) file for details.
-This update site is automatically maintained by GitHub Actions CI/CD.
+## 🛠 CI/CD ビルド・デプロイ先
+この `develop` ブランチに変更がプッシュされると、GitHub Actions によって自動的にビルドされ、以下のテスト用アップデートサイトにデプロイされます。
+
+* **開発版アップデートサイトURL:** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
+
+## 📥 テスト版のインストール方法
+このブランチの最新ビルドをテストするには以下の手順を実行します：
+1. Eclipse を起動し、**[ヘルプ]** > **[新規ソフトウェアのインストール...]** を選択します。
+2. **[追加...]** をクリックし、上記の**開発版アップデートサイトURL**を入力します。
+3. リストの「TOOL」カテゴリー内にある **JHappy AI Exporter** にチェックを入れます。
+4. インストールを完了し、Eclipse を再起動してください。（※未署名警告が出た場合は続行してください）
 
 ---
 
-<h1 id="日本語">🤖 JHappy AI Exporter (日本語)</h1>
+<h1 id="chinese">🤖 JHappy AI Exporter - 🚧 开发分支 (develop)</h1>
 
-**JHappy AI Exporter** は、Eclipse上のソースコードをChatGPTやGeminiなどのAIツールに渡す作業を劇的に効率化するプラグインです。選択したプロジェクト資産を、LLM（大規模言語モデル）が最も理解しやすい形式の1つのテキストファイルに集約・出力します。
+> [!WARNING]
+> **您当前查看的是 `develop` 分支。**
+> 此分支包含最新的实验性功能、错误修复以及正在进行的开发工作，可能不够稳定。如需获取稳定版本，请切换至 [`main` 分支](https://github.com/Tatoo2018/JHappy4AI/tree/main)。
 
-## ✨ 主な機能
-* **スマート結合:** 複数のファイルやフォルダを解析し、Markdown形式で区切られた1つのテキストファイルに出力します。
-* **トークン節約（フィルタリング）:** 拡張子（ホワイトリスト/ブラックリスト）やフォルダ名指定により、不要なバイナリやビルド生成物を除外します。
-* **コンテキスト長保護（MB制限）:** AIの入力制限に合わせて、出力ファイルの最大サイズ（MB単位）を指定可能。制限到達時は安全に書き込みを中断し、警告を挿入します。
-* **文字コード自動統一:** 各ソースファイルの元の文字コード（Shift-JISなど）に関わらず、すべて **UTF-8** に変換して出力し、AI側での文字化けを防ぎます。
-* **完全日本語対応:** メニュー、ダイアログ、および内蔵のヘルプシステムはすべて日本語環境に対応しています。
+**JHappy AI Exporter** 是一款专为 Eclipse 设计的插件，旨在打通开发工作区与 AI 工具之间的壁垒。
 
-## 📥 インストール方法
+## 🌳 分支策略
+本仓库采用结构化的分支模型，将活跃开发与稳定发布隔离开来。
 
-Eclipse IDE に **JHappy4AI** をインストールするには、以下の手順に従ってください。
+* **`develop` (当前):** 主要的开发分支。所有新功能和错误修复都首先合并到这里，并自动部署到 `/develop/` 更新站点以供测试。
+* **`main`:** 稳定版分支。只有经过充分测试并准备发布的代码才会合并到这里，并自动部署到面向大众的 `/main/` 更新站点。
+* **`gh-pages`:** 制品托管分支。完全由 GitHub Actions 自动管理，存储已编译的 `.jar` 文件和用于 Eclipse 更新站点的元数据。请勿在此分支手动提交。
 
-1. 用途に合わせて、以下のいずれかのアップデートサイトURLをコピーします：
-   * **安定版 (推奨):** `https://tatoo2018.github.io/JHappy4AI/updatesite/main/`
-   * **開発版 (最新機能):** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
-2. Eclipse を起動し、メニューの **[ヘルプ] (Help)** > **[新規ソフトウェアのインストール...] (Install New Software...)** を選択します。
-3. **[追加...] (Add...)** ボタンをクリックします。
-4. 「名前」欄に `JHappy4AI`、「ロケーション」欄に先ほどコピーした URL を入力し、**[追加]** を押します。
-5. リストの「TOOL」カテゴリー内に表示された **JHappy AI Exporter** にチェックを入れます。
-6. ウィザードの指示に従い、インストールを完了させて Eclipse を再起動してください。
+## 🛠 CI/CD 构建与部署目标
+推送到此 `develop` 分支的代码将由 GitHub Actions 自动构建，并部署到以下更新站点以供测试：
 
-> **注意:** 本プラグインは署名されていないため、インストール中に「セキュリティ警告」が表示されます。そのまま **[インストールを続行] (Install anyway)** を選択して進めてください。
+* **开发版更新站点 URL:** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
 
-## 🚀 使い方
-1. **パッケージ・エクスプローラー**で、対象のプロジェクトやファイルを選択します。
-2. 右クリックメニューから **🤖 AI用にソースを結合して出力** を選択します。
-3. ダイアログで今回適用するフィルタや容量制限を確認・調整します。
-4. **OK** を押してファイルを保存します。
-5. 出力されたテキストファイルを、AIのチャット画面にそのまま貼り付け（ドラッグ＆ドロップ）してください！
-
-## ⚙️ デフォルト設定の変更
-毎回同じ設定を入力する手間を省くため、以下のメニューからデフォルト値を変更できます：
-`ウィンドウ` ＞ `設定` ＞ `JHappy AI エクスポート設定`
-
-## 📚 ヘルプドキュメント
-Eclipse内の以下のメニューからユーザーガイドを確認できます：
-`ヘルプ (Help)` > `ヘルプ目次 (Help Contents)` > `JHappy AI ユーザーガイド`
-
-## 📄 ライセンス
-本プロジェクトは MIT License の下で公開されています。詳細は [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) ファイルをご覧ください。
-本更新サイトは GitHub Actions CI/CD によって自動管理されています。
+## 📥 测试版安装方法
+如需安装此分支的最新测试版本，请执行以下步骤：
+1. 在 Eclipse 中，前往 **Help (帮助)** > **Install New Software... (安装新软件...)**。
+2. 点击 **Add... (添加...)**，并粘贴上述的**开发版更新站点 URL**。
+3. 从列表的 TOOL 分类中勾选 **JHappy AI Exporter**。
+4. 完成安装并重启 Eclipse。（※如遇未签名警告，请选择继续安装）
 
 ---
-
-<h1 id="chinese">🤖 JHappy AI Exporter (简体中文)</h1>
-
-**JHappy AI Exporter** 是一款专为 Eclipse 设计的插件，旨在打通开发工作区与 ChatGPT、Gemini 及 Claude 等 AI 工具之间的壁垒。它可以无缝地将您选择的源代码整合为一个经过 LLM（大语言模型）优化的单一文本文件。
-
-## ✨ 主要功能
-* **智能聚合:** 将多个文件和文件夹合并为一个 Markdown 格式的文本文件 (`.txt`)。
-* **节省 Token (过滤):** 通过可自定义的白名单和黑名单，排除不必要的二进制文件或构建文件夹（如 `.class`, `target/`, `bin/`）。
-* **上下文窗口保护:** 设置最大输出大小限制（以 MB 为单位）。如果达到限制，导出将安全截断并发出警告。
-* **编码安全:** 自动根据各个 Eclipse 项目的编码读取文件，并统一导出为 **UTF-8** 格式。
-* **多语言支持:** UI 及内置帮助内容完全支持英语、日语和中文。
-
-## 📥 安装方法
-
-请按照以下步骤在您的 Eclipse IDE 中安装 **JHappy4AI**:
-
-1. 根据您的需求，复制以下任一更新站点 URL：
-   * **稳定版 (推荐):** `https://tatoo2018.github.io/JHappy4AI/updatesite/main/`
-   * **开发版 (最新功能):** `https://tatoo2018.github.io/JHappy4AI/updatesite/develop/`
-2. 在 Eclipse 中，前往 **Help (帮助)** > **Install New Software... (安装新软件...)**。
-3. 点击 **Add... (添加...)** 按钮。
-4. 在 Name (名称) 栏输入 `JHappy4AI`，并在 Location (位置) 栏粘贴您选择的 URL。
-5. 点击 **Add (添加)**，然后从列表的 TOOL 分类中勾选 **JHappy AI Exporter**。
-6. 按照提示完成安装并重启 Eclipse。
-
-> **注意:** 由于这是一个自签名插件，安装过程中可能会出现“安全警告”。请点击“仍然安装 (Install anyway)”以继续。
-
-## 🚀 如何使用
-1. 在 **Package Explorer (包资源管理器)** 中选择项目、文件夹或文件。
-2. 右键点击并选择 **🤖 聚合源码以供 AI 使用**。
-3. 在弹出的对话框中调整临时过滤器和 MB 大小限制。
-4. 点击 **OK** 并保存 `jhappy_source_context.txt` 文件。
-5. 将生成的文件拖放到您喜爱的 AI 聊天窗口中！
-
-## ⚙️ 配置
-您可以通过以下路径更改默认扩展名和大小限制：
-`Window (窗口)` > `Preferences (首选项)` > `JHappy AI Exporter Settings`
-
-## 📚 帮助文档
-您可以在 Eclipse 菜单中查看用户指南：
-`帮助 (Help)` > `帮助内容 (Help Contents)` > `JHappy AI 用户指南 (JHappy AI User Guide)`
-
-## 📄 开源协议
-本项目基于 MIT 协议开源 - 详情请参阅 [LICENSE](JHappy4AI_eclipsePDEproject/LICENSE) 文件。
-本更新站点由 GitHub Actions CI/CD 自动维护。
+© 2026 Tatoo2018. Managed by GitHub Actions.

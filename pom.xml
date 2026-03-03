@@ -5,12 +5,15 @@
 
     <groupId>JHappy4AI</groupId>
     <artifactId>JHappy4AI.parent</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.6-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <tycho-version>4.0.7</tycho-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+          <maven.compiler.release>9</maven.compiler.release>
+        <maven.compiler.source>9</maven.compiler.source>
+        <maven.compiler.target>9</maven.compiler.target>
     </properties>
 
     <modules>
