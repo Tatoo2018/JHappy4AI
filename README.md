@@ -22,7 +22,9 @@
 https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
 
 
-> 📺 **Watch the Tutorial on YouTube:** > [Click here to watch]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=8HJL-KnolQs))
+## 📺 Watch the Tutorial on YouTube:
+
+[Click here to watch](https://www.youtube.com/watch?v=8HJL-KnolQs)
 
 ## 📥 Installation
 
