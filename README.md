@@ -21,6 +21,8 @@
 
 https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
 
+[JHappy4AI Demo Video](https://www.youtube.com/watch?v=8HJL-KnolQs)
+
 ## 📥 Installation
 
 To install **JHappy4AI** in your Eclipse IDE, please follow these steps:
