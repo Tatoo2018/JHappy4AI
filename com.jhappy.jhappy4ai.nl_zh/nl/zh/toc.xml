@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?eclipse version="3.4"?>
-<toc label="JHappy AI エクスポート ユーザーガイド" topic="html/main.html">
-   <topic label="Overview" href="html/main.html" />
+
+<toc label="JHappy AI Exporter 用户指南" topic="html/main.html">
+<topic label="概览" href="html/main.html" />
 </toc>
