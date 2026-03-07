@@ -19,10 +19,11 @@
 * **Encoding Safety:** Automatically reads files using their respective Eclipse project encodings and exports everything unified in **UTF-8**.
 * **Multilingual:** UI and internal Help contents fully support both English and Japanese.
 
-https://github.com/user-attachments/assets/65710817-0afb-4a87-ab92-dcc81f1b1db6
-
-
 ## 📺 Watch the Tutorial on YouTube:
+
+<a href="https://www.youtube.com/watch?v=WNTH7tCNqLQ" style="width:500px;display:block;">
+  <img src="https://img.youtube.com/vi/WNTH7tCNqLQ/0.jpg" alt="Watch the video" style="width:400px; max-width:500px;">
+</a>
 
 [Click here to watch](https://www.youtube.com/watch?v=WNTH7tCNqLQ)
 
