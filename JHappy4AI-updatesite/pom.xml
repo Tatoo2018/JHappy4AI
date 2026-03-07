@@ -13,6 +13,7 @@
     <artifactId>JHappy-updatesite</artifactId>
     <!-- This tag may trigger a warning in the Eclipse editor, but it is required for the Maven build (using the Tycho plugin). -->
     <packaging>eclipse-repository</packaging>
+    <name>JHappy4AI UPDATE SITE</name> 
 
     <build>
         <plugins>
