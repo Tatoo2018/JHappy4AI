@@ -18,6 +18,8 @@
 
     <modules>
         <module>JHappy4AI_eclipsePDEproject</module>
+        <module>com.jhappy.jhappy4ai.nl_ja</module>
+        <module>com.jhappy.jhappy4ai.nl_zh</module>
         <module>com.jhappy.jhappy4ai.feature</module>
         <module>JHappy4AI-updatesite</module>
         <module>JHappy4AI_eclipseJUnitproject</module>

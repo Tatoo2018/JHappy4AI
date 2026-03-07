@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nl_ja
+Bundle-SymbolicName: com.jhappy.jhappy4ai.nl_zh
+Bundle-Version: 1.0.6.qualifier
+Eclipse-BundleShape: jar
+Bundle-Vendor: JHAPPY
+Fragment-Host: JHappy4AI_eclipsePDEproject;bundle-version="1.0.0"
+Automatic-Module-Name: com.jhappy.jhappy4ai.nl.zh
+Bundle-RequiredExecutionEnvironment: JavaSE-17
