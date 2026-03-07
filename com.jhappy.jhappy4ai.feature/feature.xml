@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="com.jhappy.jhappy4ai.feature"
-      label="JHappyFeature"
+      label="JHappy4AIFeature"
       version="1.0.6.qualifier"
       provider-name="JHAPPY">
 
