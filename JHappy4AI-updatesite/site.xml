@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="JHappy update site">
-      This is Happy update site
+   <description name="JHappy4AI update site">
+      This is JHappy4A update site
    </description>
    <feature url="features/com.jhappy.jhappy4ai.feature_1.0.4.202603011140.jar" id="com.jhappy.jhappy4ai.feature" version="1.0.4.202603011140">
       <category name="tool"/>

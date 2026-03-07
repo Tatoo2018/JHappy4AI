@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="com.jhappy.jhappy4ai.feature"
-      label="JHappyFeature"
+      label="JHappy4AIFeature"
       version="1.0.6.qualifier"
       provider-name="JHAPPY">
 
@@ -30,6 +30,14 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
 
    <plugin
          id="JHappy4AI_eclipsePDEproject"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.jhappy.jhappy4ai.nl_ja"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.jhappy.jhappy4ai.nl_zh"
          version="0.0.0"/>
 
 </feature>
