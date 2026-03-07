@@ -32,4 +32,12 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
          id="JHappy4AI_eclipsePDEproject"
          version="0.0.0"/>
 
+   <plugin
+         id="com.jhappy.jhappy4ai.nl_ja"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.jhappy.jhappy4ai.nl_zh"
+         version="0.0.0"/>
+
 </feature>
